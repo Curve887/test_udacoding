@@ -10,9 +10,9 @@ class AuthProvider extends ChangeNotifier {
   var enteredNama = '';
 
   void submit() {
-    final _isvalid = form.currentState!.validate();
+    final isvalid = form.currentState!.validate();
 
-    if (!_isvalid) {
+    if (!isvalid) {
       return;
     }
     form.currentState!.save();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:udacoding_test/provider/auth_provider.dart';
+import 'package:udacoding_test/provider/book_provider.dart';
 import 'package:udacoding_test/provider/imagepick_provider.dart';
 import 'package:udacoding_test/screen/login_screen.dart';
 
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_)=> AuthProvider()),
-        ChangeNotifierProvider(create: (_)=> ImagePickProvider())
+        ChangeNotifierProvider(create: (_)=> ImagePickProvider()),
+        ChangeNotifierProvider(create: (_)=> BookProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
